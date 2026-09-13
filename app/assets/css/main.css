@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+/*
+ * デザイン方針（概要書 4.）
+ * - ベースカラー1色 + アクセントカラー1色のミニマル構成
+ * - フォントは明朝系(見出し) + ゴシック系(本文) の2書体に限定
+ * - 余白は通常の1.5〜2倍。spacing スケールをそのまま大きめに使う
+ */
+@theme {
+  /* base: 温かみのある紙色 / ink: 黒に寄せた文字色 / accent: くすんだ金茶 */
+  --color-paper: #f7f4ef;
+  --color-paper-dim: #efe9e0;
+  --color-ink: #201c18;
+  --color-ink-soft: #5b524a;
+  --color-accent: #94794e;
+  --color-line: #dcd4c8;
+
+  --font-serif: "Zen Old Mincho", "Hiragino Mincho ProN", "YuMincho", serif;
+  --font-sans: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic",
+    system-ui, sans-serif;
+
+  /* セクション間の“通常の1.5〜2倍”余白 */
+  --spacing-section: 10rem;
+  --spacing-section-sm: 6rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.9;
+    font-feature-settings: "palt";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-paper);
+  }
+}
+
+@layer components {
+  /* 中央寄せの読みやすいコンテナ。左右に大きめの余白を確保する */
+  .container-page {
+    width: 100%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-page {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  /* 小さな見出しラベル（"01 — About" のような節番号表示） */
+  .section-label {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+}
+
+/*
+ * フェードインの初期状態は CSS では隠さない。
+ * SSR / JS 無効 / prefers-reduced-motion では“見えている”のが正で、
+ * クライアントで useScrollFadeIn が gsap.set → gsap.to で制御する。
+ */
