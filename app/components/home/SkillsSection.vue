@@ -1,16 +1,20 @@
 <script setup lang="ts">
 const groups = [
   {
-    title: 'Frontend',
-    items: ['Nuxt 3 / Vue 3', 'React / Vite', 'TypeScript', 'Tailwind CSS', 'GSAP'],
+    title: '言語',
+    items: ['TypeScript', 'JavaScript', 'HTML/CSS', 'Python', 'Ruby', 'PHP', 'VBA'],
   },
   {
-    title: 'Backend',
-    items: ['Laravel / PHP', 'REST API 設計', 'SQLite / MySQL'],
+    title: 'フレームワーク',
+    items: ['Nuxt 3 / Vue 3', 'React / Vite', 'Laravel', 'FastAPI', 'Ruby on Rails', 'GAS', 'GSAP'],
   },
   {
-    title: 'Ops & Tools',
-    items: ['GCP', 'Vercel', 'Firebase Hosting', 'Git / GitHub', 'microCMS'],
+    title: 'インフラ / クラウド',
+    items: ['GCP', 'Firebase Hosting', 'Docker', 'AWS', 'NAS', 'Tailscale', 'DUO'],
+  },
+  {
+    title: 'ツール・その他',
+    items: ['Git / GitHub', 'microCMS', 'REST API 設計', 'Looker Studio'],
   },
 ]
 </script>
@@ -21,7 +25,7 @@ const groups = [
       <AppReveal targets="[data-fade]" :stagger="0.1">
         <SectionLabel data-fade class="mb-10">02 — Skills</SectionLabel>
 
-        <div class="grid gap-x-10 gap-y-14 md:grid-cols-3">
+        <div class="grid gap-x-10 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
           <div v-for="group in groups" :key="group.title" data-fade>
             <h3 class="mb-5 text-lg">{{ group.title }}</h3>
             <ul class="space-y-2 text-ink-soft">
