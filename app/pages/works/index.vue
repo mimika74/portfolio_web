@@ -3,9 +3,9 @@ import { works } from '~/data/works'
 
 useSeoMeta({
   title: 'Works',
-  description: 'これまでに設計・実装・運用まで関わったプロジェクトと、GitHub の公開リポジトリ。',
+  description: '個人開発のプロジェクトと、GitHub の公開リポジトリ。',
   ogTitle: 'Works | Portfolio',
-  ogDescription: 'これまでに設計・実装・運用まで関わったプロジェクトと、GitHub の公開リポジトリ。',
+  ogDescription: '個人開発のプロジェクトと、GitHub の公開リポジトリ。',
 })
 </script>
 
@@ -17,7 +17,7 @@ useSeoMeta({
         これまでに手を動かしてきたもの
       </h1>
       <p data-fade class="mt-6 max-w-xl text-ink-soft">
-        個人開発と受託を問わず、設計・実装・運用まで関わったプロジェクトを並べています。
+        ここでは主に個人開発のプロジェクトを並べています。関わった案件については職務経歴書に記載しております。
       </p>
 
       <div data-fade class="mt-16">
