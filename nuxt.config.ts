@@ -57,7 +57,6 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-        { rel: 'alternate icon', type: 'image/x-icon', href: '/favicon.ico' },
       ],
     },
   },
