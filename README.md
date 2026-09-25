@@ -2,6 +2,7 @@
 
 GitHub 上に散らばった開発実績を、1 つの URL にまとめて伝える個人ポートフォリオサイト。
 「余白を活かした上質なブランドサイト」のトーンを、個人ポートフォリオとして現実的な規模に落とし込む。
+公開URL:https://portfolio-web--portfolio-web-55389.asia-east1.hosted.app/gate?redirect=/
 
 ## 技術スタック
 
