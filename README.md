@@ -2,21 +2,21 @@
 
 GitHub 上に散らばった開発実績を、1 つの URL にまとめて伝える個人ポートフォリオサイト。
 「余白を活かした上質なブランドサイト」のトーンを、個人ポートフォリオとして現実的な規模に落とし込む。
-公開URL:https://portfolio-web--portfolio-web-55389.asia-east1.hosted.app/gate?redirect=/
+公開URL:https://mika0portfolio.com/
 
 ## 技術スタック
 
-| 項目 | 選定 |
-|---|---|
-| フレームワーク | Nuxt（`nuxi` 最新版が生成する系統。本リポジトリは Nuxt 4 系で初期化） |
-| 言語 | TypeScript |
-| スタイリング | Tailwind CSS v4（`@tailwindcss/vite`） |
-| アニメーション | GSAP + ScrollTrigger |
-| フォント | `@nuxt/fonts`（Google Fonts / Zen Old Mincho・Zen Kaku Gothic New） |
-| 画像 | `@nuxt/image`（遅延読み込み標準） |
-| CMS | microCMS（Blog/News のみ。`server/api/blog/*` で microcms-js-sdk を直接利用） |
-| フォーム | Formspree（軽量メール送信） |
-| ホスティング | Firebase（App Hosting） |
+| 項目           | 選定                                                                          |
+| -------------- | ----------------------------------------------------------------------------- |
+| フレームワーク | Nuxt（`nuxi` 最新版が生成する系統。本リポジトリは Nuxt 4 系で初期化）         |
+| 言語           | TypeScript                                                                    |
+| スタイリング   | Tailwind CSS v4（`@tailwindcss/vite`）                                        |
+| アニメーション | GSAP + ScrollTrigger                                                          |
+| フォント       | `@nuxt/fonts`（Google Fonts / Zen Old Mincho・Zen Kaku Gothic New）           |
+| 画像           | `@nuxt/image`（遅延読み込み標準）                                             |
+| CMS            | microCMS（Blog/News のみ。`server/api/blog/*` で microcms-js-sdk を直接利用） |
+| フォーム       | Formspree（軽量メール送信）                                                   |
+| ホスティング   | Firebase（App Hosting）                                                       |
 
 > 概要書では「Nuxt 3 最新版」と指定されているが、`nuxi@latest` が生成する現行安定版は
 > Nuxt 4 系（`app/` を srcDir とする構成）。指定の意図＝「最新版で作り直す」に沿って
@@ -58,23 +58,23 @@ npm run dev            # http://localhost:3000
 
 ### 環境変数（`.env`）
 
-| 変数 | 用途 |
-|---|---|
-| `MICROCMS_SERVICE_DOMAIN` | microCMS のサービスドメイン |
-| `MICROCMS_API_KEY` | microCMS のコンテンツ API キー |
-| `NUXT_PUBLIC_FORMSPREE_ENDPOINT` | Formspree のフォーム URL |
+| 変数                             | 用途                           |
+| -------------------------------- | ------------------------------ |
+| `MICROCMS_SERVICE_DOMAIN`        | microCMS のサービスドメイン    |
+| `MICROCMS_API_KEY`               | microCMS のコンテンツ API キー |
+| `NUXT_PUBLIC_FORMSPREE_ENDPOINT` | Formspree のフォーム URL       |
 
 未設定時は `/blog` と `/contact` が「準備中」表示にフォールバックする。
 
 ## microCMS スキーマ（`blogs` API / リスト形式）
 
-| フィールド ID | 型 |
-|---|---|
-| `title` | テキスト |
-| `slug` | テキスト |
-| `content` | リッチエディタ |
-| `eyecatch` | 画像 |
-| `tags` | 複数選択 |
+| フィールド ID | 型                                    |
+| ------------- | ------------------------------------- |
+| `title`       | テキスト                              |
+| `slug`        | テキスト                              |
+| `content`     | リッチエディタ                        |
+| `eyecatch`    | 画像                                  |
+| `tags`        | 複数選択                              |
 | `publishedAt` | 日時（microCMS 標準の公開日時を利用） |
 
 ## デプロイ（Firebase App Hosting）
